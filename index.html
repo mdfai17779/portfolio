@@ -366,7 +366,7 @@ $('#copy-email').addEventListener('click',async()=>{
   setTimeout(()=>btn.textContent=original,2600);
 });
 $('#vcard').addEventListener('click',()=>{
-  const payload='BEGIN:VCARD\r\nVERSION:3.0\r\nN:Hossain;MD Faiyaz;;;\r\nFN:MD Faiyaz Hossain\r\nEMAIL;TYPE=INTERNET:faiyazh1234@gmail.com\r\nADR;TYPE=WORK:;;;Ottawa;Ontario;;Canada\r\nURL:https://github.com/mdfai17779\r\nEND:VCARD\r\n';
+  const payload='BEGIN:VCARD\r\nVERSION:3.0\r\nN:Hossain;MD Faiyaz;;;\r\nFN:MD Faiyaz Hossain\r\nEMAIL;TYPE=INTERNET:faiyazh1234@gmail.com\r\nURL:https://github.com/mdfai17779\r\nEND:VCARD\r\n';
   const blob=new Blob([payload],{type:'text/vcard;charset=utf-8'});const url=URL.createObjectURL(blob);
   const a=document.createElement('a');a.href=url;a.download='MD_Faiyaz_Hossain.vcf';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);
 });
